@@ -19,7 +19,7 @@ export default App = () => {
     const pickerResult = await ImagePicker.launchImageLibraryAsync();
     console.log(pickerResult);
 
-    if (pickerResult.canceled === true) {
+    if (pickerResult.cancelled === true) {
       return;
     }
 
@@ -35,7 +35,7 @@ export default App = () => {
           uri:
             selectImage !== null
             ? selectImage
-              : "https://picsum.photos/200/300",
+              : "https://picsum.photos/200/300"
         }}
       />
       <TouchableOpacity onPress={openImagesPickerAsync} style={styles.button}>
